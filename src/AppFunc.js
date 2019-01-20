@@ -4,7 +4,7 @@ const AppFunc = props => {
   const [count, setCount] = useState(0)
 
   const incrementCount = () => {
-    setCount(count + 1)
+    setCount(prevCount => prevCount + 1)
   }
 
   const resetCount = () => {
@@ -12,12 +12,12 @@ const AppFunc = props => {
   }
 
   const decrementCount = () => {
-    setCount(count - 1)
+    setCount(prevCount => prevCount - 1)
   }
 
   const delayCount = () => {
     setTimeout(() => {
-      setCount(count + 1)
+      setCount(prevCount => prevCount + 1)
     }, 1000)
   }
 
