@@ -1,32 +1,11 @@
 import React, { useState } from 'react'
 
-const AppFunc = props => {
+const AppFunc = () => {
   const [count, setCount] = useState(0)
-
-  const incrementCount = () => {
-    setCount(prevCount => prevCount + 1)
-  }
-
-  const resetCount = () => {
-    setCount(0)
-  }
-
-  const decrementCount = () => {
-    setCount(prevCount => prevCount - 1)
-  }
-
-  const delayCount = () => {
-    setTimeout(() => {
-      setCount(prevCount => prevCount + 1)
-    }, 1000)
-  }
 
   return (
     <>
-      <button onClick={incrementCount}>Clicked {count}</button>
-      {count > 0 && <button onClick={decrementCount}>-1</button>}
-      <button onClick={resetCount}>Reset</button>
-      <button onClick={delayCount}>Delay +1</button>
+      <button onClick={() => setCount(prevCount => prevCount + 1)}>{count}</button>
     </>
   )
 }

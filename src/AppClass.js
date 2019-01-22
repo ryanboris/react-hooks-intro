@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
+
 
 class App extends Component {
   state = {
@@ -16,7 +18,9 @@ class App extends Component {
   render() {
     const { count } = this.state
     return (
-      <button style={{ color: 'red' }}>Clicked AppClass {count} times</button>
+      <button onClick={this.incrementCount} style={{ color: 'red' }}>
+        Clicked AppClass {count} times
+      </button>
     )
   }
 }
