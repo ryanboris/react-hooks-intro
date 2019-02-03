@@ -33,12 +33,12 @@ const AppFunc = () => {
     };
   }, [count]);
 
-  const handleGeolocation = event => {
+  const handleGeolocation = e => {
     if (mounted) {
       setLocation({
-        latitude: event.coords.latitude,
-        longitude: event.coords.longitude,
-        speed: event.coords.speed
+        latitude: e.coords.latitude,
+        longitude: e.coords.longitude,
+        speed: e.coords.speed
       });
     }
   };
