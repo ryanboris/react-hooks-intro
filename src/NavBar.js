@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Collapse,
   Navbar,
@@ -10,11 +10,8 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
- } from 'reactstrap';
-
-
-
+  DropdownItem
+} from "reactstrap";
 
 export default class NavBarComponent extends React.Component {
   constructor(props) {
@@ -25,11 +22,13 @@ export default class NavBarComponent extends React.Component {
       isOpen: false
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+
   render() {
     return (
       <div>
@@ -39,16 +38,24 @@ export default class NavBarComponent extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/"><i class="fab fa-facebook-square"></i></NavLink>
+                <NavLink href="/components/">
+                  <i className="fab fa-facebook-square" />
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap"><i class="fab fa-github-square"></i></NavLink>
+                <NavLink href="https://github.com/reactstrap/reactstrap">
+                  <i className="fab fa-github-square" />
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink><i class="fab fa-twitter-square"></i></NavLink>
+                <NavLink>
+                  <i className="fab fa-twitter-square" />
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink><i class="fab fa-linkedin"></i></NavLink>
+                <NavLink>
+                  <i className="fab fa-linkedin" />
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>

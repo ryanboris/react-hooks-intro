@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Button } from 'reactstrap';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import { Button } from "reactstrap";
+import styled from "styled-components";
 
 // * Styles - Components
 const FormContainer = styled.div`
@@ -18,9 +18,9 @@ const Form = styled.form`
 `;
 
 export default function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [user, setUser] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, setUser] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -29,8 +29,8 @@ export default function Login() {
       password
     };
     setUser(userData);
-    setUsername('');
-    setPassword('');
+    setUsername("");
+    setPassword("");
   };
 
   return (
